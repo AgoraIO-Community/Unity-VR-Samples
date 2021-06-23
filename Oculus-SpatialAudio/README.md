@@ -20,15 +20,18 @@ To build and run the sample application, get an App ID:
 
 ### Run the Application   
 
+#### Build to Oculus
 1. Set up Unity environment for Oculus Quest ([see offical guide](https://developer.oculus.com/documentation/unity/unity-gs-overview/))
 2. Download [Agora Video SDK for Unity](https://assetstore.unity.com/packages/tools/video/agora-video-sdk-for-unity-134502)
 3. Import this package
 4. Fill in App ID and make sure all other fields gets filled too.  Capsule is the default prefab but you may make your own for replacement.
 5. Please make sure if your AppID has token or not.  Things won't work if you don't supply a token if your AppID requires one.
 ![AgoraRoot](https://user-images.githubusercontent.com/1261195/123020656-7dd3a480-d387-11eb-9fee-d4308cfed33d.png)
+6. Build and run
+7. [optional recommendation] Use Side Quest app to run/kill/unload App
 
 
-#### Test in Editor 
+#### Test in Unity Editor 
 You can run this project in the Editor.  But you may have to fix a Oculus SDK bug:
 
 Update the OculusSampleFrameworkUtil.cs script with the following code snippet:
