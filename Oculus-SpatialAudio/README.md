@@ -1,4 +1,6 @@
 # Spatial Audio with Agora on Oculus
+## NOTE THIS PACKAGE IS BASED ON LEGACY 3.x SDK ##
+
 This Unity project package includes the scene file and its dependent resources for running a spatial audio test on individual user objects.  Remote users from non VR platforms can be viewed on the Capsule. And their sound will be originated from the Capsule object in the VR environment. 
 ![oculus scene](https://user-images.githubusercontent.com/1261195/123018737-f0db1c00-d383-11eb-90e1-e2bacf3e03d7.gif)
 
@@ -51,10 +53,9 @@ private static void HandlePlayModeState(PlayModeStateChange state)
  }
 ```
 ## Resources
-
+- [Tutorial blog](https://www.agora.io/en/blog/how-to-build-a-vr-video-chat-app-with-spatial-audio-on-oculus/) describes this project
 - For potential Agora SDK issues, take a look at our [FAQ](https://docs.agora.io/en/faq) first
 - Dive into [Agora SDK Samples](https://github.com/AgoraIO/Agora-Unity-Quickstart) to see more API samples for Unity
-- Take a look at [these blogs](https://www.agora.io/en/category/developer/) for developer contents
 - Repositories managed by developer communities can be found at [Agora Community](https://github.com/AgoraIO-Community)
 
 
