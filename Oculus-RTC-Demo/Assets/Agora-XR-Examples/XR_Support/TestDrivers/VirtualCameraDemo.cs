@@ -17,8 +17,8 @@ namespace Agora.Samples
         [SerializeField]
         private VideoDimensions dimensions = new VideoDimensions
         {
-            width = 1280,
-            height = 720
+            width = 1920,
+            height = 1080
         };
 
         // Pixel format
@@ -40,6 +40,7 @@ namespace Agora.Samples
             {
                 bitrate = 0,
                 minBitrate = 1,
+                dimensions = this.dimensions,
                 orientationMode = ORIENTATION_MODE.ORIENTATION_MODE_ADAPTIVE,
                 degradationPreference = DEGRADATION_PREFERENCE.MAINTAIN_FRAMERATE,
                 mirrorMode = VIDEO_MIRROR_MODE_TYPE.VIDEO_MIRROR_MODE_ENABLED
