@@ -40,7 +40,7 @@ To build and run the sample application, get an App ID:
 
 1. Clone this repo and open the project from this folder
 2. Set up Unity environment for Oculus Quest ([see offical guide](https://developer.oculus.com/documentation/unity/unity-gs-overview/))
-3. Download [Agora Video SDK for Unity](https://assetstore.unity.com/packages/tools/video/agora-video-sdk-for-unity-134502) (Version 4.1.0 or above)
+3. Download [Agora Video SDK for Unity](https://docs.agora.io/en/sdks?platform=unity)
 
 4. Fill in App ID and make sure all other fields gets filled too.  ![OculusRTCDemo-AppID](https://user-images.githubusercontent.com/1261195/234465370-7a09702f-7429-43d7-8fea-6feb4b573149.jpg)
 
