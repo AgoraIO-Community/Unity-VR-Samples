@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-using System.Threading;
 using UnityEngine;
-using Agora.Rtc;
 using RingBuffer;
-using Agora_RTC_Plugin.API_Example.Examples.Advanced.ProcessAudioRawData;
-using Agora.Util;
+using Agora_RTC_Plugin.API_Example;
 
 namespace Agora.Rtc.Extended
 {
@@ -56,7 +52,13 @@ namespace Agora.Rtc.Extended
         public override void Init(IRtcEngine engine, object rtclock)
         {
             RtcEngine = engine;
-            RtcEngine.RegisterAudioFrameObserver(new AudioFrameObserver2(this), OBSERVER_MODE.RAW_DATA);
+            RtcEngine.RegisterAudioFrameObserver(new AudioFrameObserver2(this),
+                 AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_PLAYBACK |
+                 AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_RECORD |
+                 AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_MIXED |
+                 AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_BEFORE_MIXING |
+                 AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_EAR_MONITORING,
+                 OBSERVER_MODE.RAW_DATA);
             RtcEngine.SetPlaybackAudioFrameParameters(SAMPLE_RATE, 1, RAW_AUDIO_FRAME_OP_MODE_TYPE.RAW_AUDIO_FRAME_OP_MODE_READ_ONLY, 1024);
         }
 
@@ -156,32 +158,6 @@ namespace Agora.Rtc.Extended
             return true;
         }
 
-        public override int GetObservedAudioFramePosition()
-        {
-            Debug.Log("GetObservedAudioFramePosition-----------");
-            return (int)(AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_PLAYBACK |
-                AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_RECORD |
-                AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_BEFORE_MIXING |
-                AUDIO_FRAME_POSITION.AUDIO_FRAME_POSITION_MIXED);
-        }
-
-        public override AudioParams GetPlaybackAudioParams()
-        {
-            Debug.Log("GetPlaybackAudioParams-----------");
-            return this._audioParams;
-        }
-
-        public override AudioParams GetRecordAudioParams()
-        {
-            Debug.Log("GetRecordAudioParams-----------");
-            return this._audioParams;
-        }
-
-        public override AudioParams GetMixedAudioParams()
-        {
-            Debug.Log("GetMixedAudioParams-----------");
-            return this._audioParams;
-        }
 
         public override bool OnPlaybackAudioFrameBeforeMixing(string channel_id,
                                                         uint uid,

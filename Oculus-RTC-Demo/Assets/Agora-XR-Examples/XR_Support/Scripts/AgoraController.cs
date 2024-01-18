@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Agora.Rtc;
 using Agora.Util;
+using Agora_RTC_Plugin.API_Example;
 
 namespace Agora.Rtc.Extended
 {
